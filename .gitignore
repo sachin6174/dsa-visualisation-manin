@@ -1,0 +1,264 @@
+# Swift Array Data Structure Project - .gitignore
+
+# ===========================================
+# Python/Manim Related Files
+# ===========================================
+
+# Python Virtual Environment
+manim_env/
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+/videos
+# Python Cache Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ===========================================
+# Manim Generated Content
+# ===========================================
+
+# Manim Output Directory (Comment out if you want to keep videos in repo)
+media/
+
+# Alternative: Keep only final videos, ignore partial files
+# media/videos/*/partial_movie_files/
+# media/videos/*/720p30/
+# media/videos/*/480p15/
+# media/images/
+# media/texts/
+
+# Manim Cache
+.manim_cache/
+
+# LaTeX temporary files (used by Manim)
+*.aux
+*.log
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# ===========================================
+# Swift Related Files
+# ===========================================
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserdata/
+DerivedData/
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+.build/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# ===========================================
+# macOS System Files
+# ===========================================
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ===========================================
+# Text Editors and IDEs
+# ===========================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Vim
+*~
+*.swp
+*.swo
+*.*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# ===========================================
+# Logs and Temporary Files
+# ===========================================
+
+# Log files
+*.log
+logs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Temporary folders
+tmp/
+temp/
+.tmp/
+
+# ===========================================
+# Environment and Configuration
+# ===========================================
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# API keys and secrets
+secrets.json
+config/secrets.yml
+.secrets
+
+# ===========================================
+# Backup and Archive Files
+# ===========================================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ===========================================
+# Project Specific
+# ===========================================
+
+# Compiled Swift executables
+ArrayDataStructure
+ArrayExamples
+ArrayExamplesFixed
+
+# Generated documentation
+docs/_build/
+site/
+
+# Test results
+test-results/
+TestResults/
+
+# Performance reports
+performance-*.html
+
+# ===========================================
+# Optional: Keep These Patterns Commented
+# ===========================================
+
+# Uncomment if you want to ignore all videos (saves repo size)
+# *.mp4
+# *.mov
+# *.avi
+
+# Uncomment if you want to ignore documentation
+# *.md
+# !README.md
+
+# Uncomment if you want to ignore all Swift files (not recommended for this project)
+# *.swift
