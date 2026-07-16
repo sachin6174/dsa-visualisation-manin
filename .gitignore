@@ -12,6 +12,10 @@ ENV/
 .venv/
 .ENV/
 /videos
+
+# Cloned External Repositories / Examples
+external_examples/
+
 # Python Cache Files
 __pycache__/
 *.py[cod]
