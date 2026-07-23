@@ -47,6 +47,20 @@ case $MACHINE in
             echo "✅ ffmpeg is already installed"
         fi
         
+        if ! command -v pkg-config &> /dev/null; then
+            echo "🍺 Installing pkg-config via Homebrew..."
+            brew install pkg-config
+        else
+            echo "✅ pkg-config is already installed"
+        fi
+        
+        if ! brew list cairo &>/dev/null; then
+            echo "🍺 Installing cairo via Homebrew..."
+            brew install cairo
+        else
+            echo "✅ cairo is already installed"
+        fi
+        
         if ! command -v latex &> /dev/null; then
             echo "🍺 Installing mactex via Homebrew (optional)..."
             brew install --cask mactex || echo "⚠️  Failed to install MacTeX. Proceeding without it (LaTeX is optional)."
