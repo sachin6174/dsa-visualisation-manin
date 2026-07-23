@@ -40,9 +40,20 @@ case $MACHINE in
             exit 1
         fi
         
-        brew install ffmpeg
-        brew install --cask mactex  # LaTeX (optional)
-        echo "✅ macOS dependencies installed"
+        if ! command -v ffmpeg &> /dev/null; then
+            echo "🍺 Installing ffmpeg via Homebrew..."
+            brew install ffmpeg
+        else
+            echo "✅ ffmpeg is already installed"
+        fi
+        
+        if ! command -v latex &> /dev/null; then
+            echo "🍺 Installing mactex via Homebrew (optional)..."
+            brew install --cask mactex || echo "⚠️  Failed to install MacTeX. Proceeding without it (LaTeX is optional)."
+        else
+            echo "✅ LaTeX (mactex) is already installed"
+        fi
+        echo "✅ macOS dependencies verified"
         ;;
         
     Linux)
@@ -94,11 +105,11 @@ source manim_env/bin/activate
 echo "✅ Activated virtual environment"
 
 # Upgrade pip
-pip install --upgrade pip
+python3 -m pip install --upgrade pip
 
 # Install Manim
 echo "🎬 Installing ManimGL..."
-pip install manimgl
+python3 -m pip install manimgl
 
 echo "🎉 Installation complete!"
 echo ""
