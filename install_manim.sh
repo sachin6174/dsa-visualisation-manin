@@ -93,6 +93,13 @@ esac
 
 # Create virtual environment (recommended)
 echo "🐍 Setting up Python environment..."
+if [ -d "manim_env" ]; then
+    if ! ./manim_env/bin/python --version &>/dev/null; then
+        echo "⚠️  Existing virtual environment (manim_env) is broken or incompatible. Recreating it..."
+        rm -rf manim_env
+    fi
+fi
+
 if [ ! -d "manim_env" ]; then
     python3 -m venv manim_env
     echo "✅ Created virtual environment: manim_env"
